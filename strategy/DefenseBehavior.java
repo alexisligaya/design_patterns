@@ -1,10 +1,7 @@
 package strategy;
 
-public class DefenseBehavior {
-    
-    public String play(){
-
-    }
-
-    
+interface DefenseBehavior{
+    String play();
 }
+
+

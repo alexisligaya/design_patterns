@@ -1,17 +1,17 @@
 package strategy;
 
-public class QuarterBack {
+public class QuarterBack extends Player{
     
-    public Quarterback(String firstName, String lastName, boolean offense){
-
+    public QuarterBack(String firstName, String lastName, boolean offense){
+            super(firstName, lastName);
     }
 
     public void setOffenseBehavior(){
-
+            System.out.println("")
     }
 
     public void setDefenseBehavior(){
-        
+        //returns nothing
     }
 
 }

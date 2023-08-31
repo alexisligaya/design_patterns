@@ -1,25 +1,24 @@
 package strategy;
 
-public class Player {
+public abstract class Player {
     private String firstName;
     private String lastName;
-    private boolean offense;
-
-
-    public Player(String firstName, String lastName, boolean offense){
-         
+    
+    public Player(String firstName, String lastName){
+        this.firstName=firstName;
+        this.lastName=lastName;
     }
 
-    public void setDefenseBehavior(){
-
+    public String play(){
+       
     }
 
-    public void setOffenseBehavior(){
+    public abstract void setDefenseBehavior();
 
-    }
+    public abstract void setOffenseBehavior();
 
     public void turnover(){
-
+        System.out.println("turnover");
     }
 
     public String toString(){
