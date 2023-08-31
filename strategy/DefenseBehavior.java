@@ -1,7 +1,7 @@
 package strategy;
 
 interface DefenseBehavior{
-    String play();
+   public String play();
 }
 
 

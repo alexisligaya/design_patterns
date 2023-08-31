@@ -1,6 +1,6 @@
 package strategy;
 
-public class SackBehavior extends DefenseBehavior{
+public class SackBehavior implements DefenseBehavior{
     
     public String play(){
 

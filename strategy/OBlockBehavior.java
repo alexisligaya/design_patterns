@@ -1,5 +1,9 @@
 package strategy;
 
-public class OBlockBehavior {
+class OBlockBehavior implements OffenseBehavior{
     
+    public String play(){
+        return null;
+    }
+
 }
