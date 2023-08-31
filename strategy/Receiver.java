@@ -7,11 +7,11 @@ public class Receiver extends Player{
     }
     
     public void setOffenseBehavior(){
-
+       
     }
 
     public void setDefenseBehavior(){
-        
+        //returns 
     }
 
 

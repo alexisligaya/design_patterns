@@ -6,5 +6,4 @@ public class StripBehavior implements DefenseBehavior{
         return "Strip a ball from runners hands";
     }
 
-
 }
