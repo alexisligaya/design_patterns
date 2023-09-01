@@ -1,7 +1,7 @@
 package strategy;
 import java.util.Random;
 
-class BlockBehavior implements DefenseBehavior{
+public class BlockBehavior implements DefenseBehavior{
     
     public String play(){
 
@@ -13,6 +13,5 @@ class BlockBehavior implements DefenseBehavior{
         String randomAction = action[rand];
 
         return("block a " + randomAction);
-    }
-    
+    }  
 }

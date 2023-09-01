@@ -1,7 +1,7 @@
 package strategy;
 import java.util.Random;
 
-public class ReceiveBehavior {
+public class ReceiveBehavior implements OffenseBehavior {
 
     public String play(){
 
@@ -14,6 +14,4 @@ public class ReceiveBehavior {
 
         return("runs a " + randomAction);
     }
-    
-
 }

@@ -21,7 +21,7 @@ public abstract class Player {
     }
 
     public String play(){
-        return play();
+        return null;
     }
 
     public void turnover(){

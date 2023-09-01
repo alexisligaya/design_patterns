@@ -9,10 +9,11 @@ public class Lineman extends Player{
     }
 
     public void setOffenseBehavior(){
-
+        offenseBehavior = new OBlockBehavior();
     }
 
     public void setDefenseBehavior(){
-        
+        int BlockBehavior=0;
+
     }
 }

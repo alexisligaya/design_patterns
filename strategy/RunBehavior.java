@@ -1,8 +1,7 @@
 package strategy;
 import java.util.Random;
 
-
-public class RunBehavior {
+public class RunBehavior implements OffenseBehavior{
 
     public String play(){
     

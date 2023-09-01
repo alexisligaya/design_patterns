@@ -7,7 +7,7 @@ public class Receiver extends Player{
     }
     
     public void setOffenseBehavior(){
-       
+       offenseBehavior = new ReceiveBehavior();
     }
 
     public void setDefenseBehavior(){

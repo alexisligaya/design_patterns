@@ -10,11 +10,14 @@ public class QuarterBack extends Player{
     }
 
     public void setOffenseBehavior(){
-        
+        defenseBehavior = new BlockBehavior();
+        offenseBehavior = new PassBehavior();
     }
 
     public void setDefenseBehavior(){
         //returns nothing
     }
+
+    
 
 }
