@@ -11,24 +11,26 @@ public abstract class Player {
         this.firstName=firstName;
         this.lastName=lastName;
         this.offense=offense;
+        setDefenseBehavior();
+        setOffenseBehavior();
     }
         
-    public void setDefenseBehavior(){
-      
-    }
+    public abstract void setDefenseBehavior();
    
-    public void setOffenseBehavior(){
-        
-    }
+    public abstract void setOffenseBehavior();
 
     public String play(){
     
-       if(offense){
+       if(offense && offenseBehavior != null){
+
             return offenseBehavior.play();
        }
-       else{
+       else if(!offense && defenseBehavior != null ){
+
             return defenseBehavior.play();
        }
+       return "not playing";
+       
     }
 
     public void turnover(){

@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class Lineman extends Player{
 
-   private Random random = new Random();
+   
 
     public Lineman(String firstName, String lastName, boolean offense){
         super(firstName, lastName, offense);
@@ -14,7 +14,8 @@ public class Lineman extends Player{
     }
 
     public void setDefenseBehavior(){
-        
+          Random random = new Random();
+
        int rand = random.nextInt(3);
        if(rand==1){
             defenseBehavior = new BlockBehavior();
