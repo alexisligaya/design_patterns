@@ -13,7 +13,7 @@ public class Lineman extends Player{
     }
 
     public void setDefenseBehavior(){
-        int BlockBehavior=0;
+       
 
     }
 }

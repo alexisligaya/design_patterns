@@ -9,7 +9,9 @@ public abstract class Player {
 
 
     public Player(String firstName, String lastName, boolean offense){
-
+        this.firstName=firstName;
+        this.lastName=lastName;
+        this.offense=offense;
     }
         
     public void setDefenseBehavior(){
@@ -21,11 +23,16 @@ public abstract class Player {
     }
 
     public String play(){
-        return null;
+       if(offense){
+        return offenseBehavior.play();
+       }
+       else{
+        return defenseBehavior.play();
+       }
     }
 
     public void turnover(){
-        return;
+       offense = !offense;
     }
 
 
