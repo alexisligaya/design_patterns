@@ -12,6 +12,6 @@ public class RunBehavior implements OffenseBehavior{
         int rand = random.nextInt(action.length);
         String randomAction = action[rand];
 
-        return("runs a a " + randomAction);
+        return("runs a " + randomAction);
     }
 }

@@ -4,9 +4,8 @@ public abstract class Player {
     private String firstName;
     private String lastName;
     private boolean offense;
-    protected DefenseBehavior defenseBehavior;
-    protected OffenseBehavior offenseBehavior;
-
+    DefenseBehavior defenseBehavior;
+    OffenseBehavior offenseBehavior;
 
     public Player(String firstName, String lastName, boolean offense){
         this.firstName=firstName;
@@ -15,11 +14,11 @@ public abstract class Player {
     }
         
     public void setDefenseBehavior(){
-       
+      
     }
    
     public void setOffenseBehavior(){
-
+        
     }
 
     public String play(){
