@@ -15,7 +15,7 @@ public abstract class Player {
     }
         
     public void setDefenseBehavior(){
-
+       
     }
    
     public void setOffenseBehavior(){
@@ -23,11 +23,12 @@ public abstract class Player {
     }
 
     public String play(){
+    
        if(offense){
-        return offenseBehavior.play();
+            return offenseBehavior.play();
        }
        else{
-        return defenseBehavior.play();
+            return defenseBehavior.play();
        }
     }
 
@@ -35,9 +36,8 @@ public abstract class Player {
        offense = !offense;
     }
 
-
     public String toString(){
-        return this.firstName + "\t" + this.lastName;
+        return this.firstName + " " + this.lastName;
     }
 
 

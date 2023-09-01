@@ -3,7 +3,7 @@ import java.util.Random;
 
 public class QuarterBack extends Player{
 
-     private Random random = new Random();
+    private Random random = new Random();
     
     public QuarterBack(String firstName, String lastName, boolean offense){
             super(firstName, lastName, offense);
