@@ -11,7 +11,7 @@ public class SackBehavior implements DefenseBehavior{
      * @return String representation of what the sack action is
      */
     public String play(){
-        return "Sack the quaterback";
+        return "Sack the quarterback";
     }
 
 }
