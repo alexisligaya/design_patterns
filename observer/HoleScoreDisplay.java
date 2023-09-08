@@ -1,8 +1,8 @@
-import java.util.Observer;
+package observer;
 
 public class HoleScoreDisplay implements Observer {
  
-    private Subject golfer;
+    public Subject golfer; //?
     private int strokes;
     private int par;
     
@@ -18,7 +18,7 @@ public class HoleScoreDisplay implements Observer {
     }
 
     public String toString(){
-        return "Strokes: " + strokes + ", Par: " + par;
+        return "\nCurrent Hole stats: Par (" + par + ") Strokes (" + strokes +") \n" ;
     }
 
 }

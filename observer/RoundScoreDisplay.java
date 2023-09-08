@@ -1,21 +1,30 @@
+package observer;
+
 public class RoundScoreDisplay implements Observer {
 
-    private Subject golfer;
+    public Subject golfer; //?
     private int strokesTotal;
     private int par;
     
     public RoundScoreDisplay(Subject golfer){
         this.golfer=golfer;
-        this.strokesTotal=0;
-        this.par=0;
     }
 
-    public void update(int strokes, int par){
-        this.strokesTotal=strokesTotak;
+    public void update(int strokesTotal, int par){
+        this.strokesTotal=strokesTotal;
         this.par=par;
+
+        int score = strokesTotal- par;
+
+        if(score < 0)
+            System.out.println("Under Par");
+        else if(score == 0)
+            System.out.println("Making par");
+        else 
+            System.out.println("over par");
     }
 
     public String toString(){
-        return "Strokes: " + strokesTotal + ", Par: " + par;
+        return "Overall Hole stats: Par (" + par + ") Strokes (" + strokesTotal +")";
     }
 }
