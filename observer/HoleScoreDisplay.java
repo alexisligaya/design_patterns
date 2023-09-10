@@ -8,7 +8,7 @@ public class HoleScoreDisplay implements Observer {
 
     private Subject golfer; 
     private int strokes;
-    private int par=3;
+    private int par;
 
    /**
      * Creates a golfer
