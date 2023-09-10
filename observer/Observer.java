@@ -1,6 +1,6 @@
 package observer;
 
-public interface Observer {
+interface Observer {
     public void update(int strokes, int par);
     public String toString();
 }

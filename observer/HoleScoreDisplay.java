@@ -1,15 +1,15 @@
 package observer;
 
+
 public class HoleScoreDisplay implements Observer {
- 
-    public Subject golfer; //?
+
+    private Subject golfer; 
     private int strokes;
-    private int par;
-    
-    public HoleScoreDisplay(Subject golfer){
+    private int par=3;
+
+   public HoleScoreDisplay(Subject golfer){
         this.golfer=golfer;
-        this.strokes=0;
-        this.par=0;
+        golfer.registerObserver(this);
     }
 
     public void update(int strokes, int par){
@@ -18,7 +18,17 @@ public class HoleScoreDisplay implements Observer {
     }
 
     public String toString(){
-        return "\nCurrent Hole stats: Par (" + par + ") Strokes (" + strokes +") \n" ;
+        String checkPar;
+        if(strokes > par){
+            checkPar= strokes-par + " over par";
+        }
+        else if(strokes == par){
+            checkPar = "Making par";
+        }
+        else{
+            checkPar = par-strokes + " under par";
+        }
+       return "\nCurrent Hole stats: Par (" + par + ") Strokes (" + strokes +"), " + checkPar;
     }
 
 }
