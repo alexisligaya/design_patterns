@@ -1,14 +1,21 @@
 package observer;
 import java.util.ArrayList;
 
+/**
+ * A golfer's name is entered
+ * @author Alexis Peters
+ */
 public class Golfer implements Subject{
     
-    private ArrayList<Observer> observers;
-    private String name;
+    protected ArrayList<Observer> observers = new ArrayList<Observer>();
+    protected String name;
 
+    /**
+     * Creates a string representation for the receivers' name 
+     * @param name Golfer's name 
+     */
     public Golfer(String name){
             this.name=name;
-            this.observers = new ArrayList<>();
     }
 
     public void registerObserver(Observer observer){
@@ -29,7 +36,11 @@ public class Golfer implements Subject{
             notifyObservers(strokes,par);
     }
 
+    /**
+     * When the golfers' name is inputed
+     * @return String representation that states the golfer's name
+     */
     public String getName(){
-        return name;
+        return this.name;
     }
 }
