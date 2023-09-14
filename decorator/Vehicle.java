@@ -9,6 +9,6 @@ public abstract class Vehicle {
     }
 
     public String toString(){
-        return null; //fix
+        return " hi ";
     }
 }
