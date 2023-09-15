@@ -9,6 +9,8 @@ public abstract class Vehicle {
     }
 
     public String toString(){
-        return " hi ";
+        //loop through array list
+        
+        return lines.toString();
     }
 }
