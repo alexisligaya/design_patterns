@@ -1,0 +1,13 @@
+package strategy;
+
+public class KidsBike extends Bike(){
+
+    public KidsBike(){
+        name = "Kide Bike";
+        price = 30.0;
+        numWheels = 4;
+        hasPeddals = true;
+        hasTrainingWheels = true;
+    }
+
+}
