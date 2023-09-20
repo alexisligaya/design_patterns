@@ -1,12 +1,12 @@
 package factory;
 
-public class Strider extends Bike(){
+public class Strider extends Bike{
     //boolean for having training wheels or bikes
     public Strider(){
         name = "Strider";
         price = 20.0;
         numWheels = 2;
-        hasPeddals = false;
+        hasPedals = false;
         hasTrainingWheels = false;
     }
 }

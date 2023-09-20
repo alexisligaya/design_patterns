@@ -1,12 +1,12 @@
 package factory;
 
-public class Tricycle extends Bike(){
+public class Tricycle extends Bike{
 
     public Tricycle(){
         name = "Tricycle";
         price = 10.0;
         numWheels = 3;
-        hasPeddals = false;
+        hasPedals = true;
         hasTrainingWheels = false;
     }
 
