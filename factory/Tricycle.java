@@ -1,5 +1,8 @@
 package factory;
-
+/**
+ * A tricycle is built.
+ * @author Alexis Peters
+ */
 public class Tricycle extends Bike{
 
     public Tricycle(){

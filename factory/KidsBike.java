@@ -1,5 +1,8 @@
 package factory;
-
+/**
+ * A kids bike is built.
+ * @author Alexis Peters
+ */
 public class KidsBike extends Bike{
 
     public KidsBike(){
