@@ -27,6 +27,7 @@ public class Game {
     }
 
     public String getQuestion(){
+
         ArrayList<Anagram> anagramsPerLevel = anagrams.get(level);
 
         //create a random number between 0 and the length of the arraylist
@@ -42,7 +43,7 @@ public class Game {
         anagramsPerLevel.remove(randIndex);
 
         //return the question for the anagagram
-        return randAnagram.getQuestion(); //?
+        return randAnagram.getQuestion(); 
     }
 
     public boolean isCorrect(String userAnswer){
