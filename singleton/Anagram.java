@@ -16,7 +16,7 @@ public class Anagram {
     }
 
     public boolean isCorrect(String userAnswer){
-        return answers.contains(userAnswer);
+        return answers.contains(userAnswer.toLowerCase());
     }
 
 }

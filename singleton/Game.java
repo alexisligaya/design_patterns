@@ -1,5 +1,6 @@
 package singleton;
 import java.util.Random;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Game {
@@ -13,27 +14,44 @@ public class Game {
 
     private Game(){
         this.rand = new Random();
-        this.level = Difficulty.EASY; //?
+        this.level = Difficulty.EASY; 
         this.anagrams = new HashMap<>();
         this.score = 0;
     }
 
     public static Game getInstance(){
-        if (instance == null){
-            instance = new Game();
+        if (game == null){
+            game = new Game();
         }
-        return instance;
+        return game;
     }
 
     public String getQuestion(){
-        return question;
+        ArrayList<Anagram> anagramsPerLevel = anagrams.get(level);
+
+        //create a random number between 0 and the length of the arraylist
+        int randIndex = rand.nextInt(anagramsPerLevel.size());
+
+        //get a random anangram
+        Anagram randAnagram = anagramsPerLevel.get(randIndex);
+
+        //set the current anagram to the random one
+        currentAnagram = anagramsPerLevel.get(randIndex);
+
+        //remove it from the list
+        anagramsPerLevel.remove(randIndex);
+
+        //return the question for the anagagram
+        return randAnagram.getQuestion(); //?
     }
 
     public boolean isCorrect(String userAnswer){
-        return answers.contains(UserAnswer);
+        return currentAnagram.isCorrect(userAnswer);
     }
 
     public int getScore(){
+        //update score?
+        score ++;
         return score;
     }
 
