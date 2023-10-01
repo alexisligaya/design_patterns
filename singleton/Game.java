@@ -2,7 +2,10 @@ package singleton;
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.HashMap;
-
+/**
+ * A anagram game is created and filled with the words. 
+ * @author Alexis Peters
+ */
 public class Game {
 
     private static Game game;
@@ -23,12 +26,20 @@ public class Game {
         anagrams.put(Difficulty.HARD, FileReader.getAnagrams(Difficulty.HARD));
     }
 
+    /**
+     * Checks that there is an instance of the game
+     * @return returns a instance of the game class
+     */
     public static Game getInstance(){
         if (game == null)
             game = new Game();
         return game;
     }
 
+    /**
+     * Looks for a random question from the anagram txt files.
+     * @return returns a random anagram based on the level
+     */
     public String getQuestion(){
 
         ArrayList<Anagram> anagramsPerLevel = anagrams.get(level);
@@ -49,19 +60,28 @@ public class Game {
         return randAnagram.getQuestion(); 
     }
 
+    /**
+     * Compares user's answer to check if it is a valid anagram
+     * @param userAnswer The user's answer to the question
+     * @return whether the answer is correct
+     */
     public boolean isCorrect(String userAnswer){
-            if(score == 6 && currentAnagram.isCorrect(userAnswer)){
-                level = Difficulty.MEDIUM; 
-            }
+            if(score == 6 && currentAnagram.isCorrect(userAnswer))
+                level = Difficulty.MEDIUM; //level increases after user's score reaches 6
 
-            if(score == 10 && currentAnagram.isCorrect(userAnswer)){
-                level = Difficulty.HARD;
-            }
-            score++; //update score
+            if(score == 10 && currentAnagram.isCorrect(userAnswer))
+                level = Difficulty.HARD; //level increases after user's score reaches 10
+
+            if(currentAnagram.isCorrect(userAnswer))
+                score++; //update score
             
         return currentAnagram.isCorrect(userAnswer);
     }
 
+    /**
+     * Retrieves the user's score
+     * @return the user's updated score
+     */
     public int getScore(){
         return score;
     }
