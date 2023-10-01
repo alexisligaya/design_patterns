@@ -11,7 +11,7 @@ public class FileReader {
      * Reads in the file and creates a list of anagorams
      * 
      * @param Difficulty Easy, Medium, or Hard
-     * @return A list of Anagorams
+     * @return A list of Anagarams
      */
     public static ArrayList<Anagram> getAnagrams(Difficulty difficulty) {
         ArrayList<Anagram> anagrams = new ArrayList<Anagram>();

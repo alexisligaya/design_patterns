@@ -6,7 +6,7 @@ public class Anagram {
     private String question;
     private ArrayList<String> answers;
 
-    public Anagram(String question, ArrayList<String> answer){
+    public Anagram(String question, ArrayList<String> answers){
         this.question = question;
         this.answers = new ArrayList<>(answers);
     }

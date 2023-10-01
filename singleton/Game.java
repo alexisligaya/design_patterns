@@ -17,12 +17,15 @@ public class Game {
         this.level = Difficulty.EASY; 
         this.anagrams = new HashMap<>();
         this.score = 0;
+
+        anagrams.put(Difficulty.EASY, FileReader.getAnagrams(Difficulty.EASY));
+        anagrams.put(Difficulty.MEDIUM, FileReader.getAnagrams(Difficulty.MEDIUM));
+        anagrams.put(Difficulty.HARD, FileReader.getAnagrams(Difficulty.HARD));
     }
 
     public static Game getInstance(){
-        if (game == null){
+        if (game == null)
             game = new Game();
-        }
         return game;
     }
 
@@ -47,12 +50,19 @@ public class Game {
     }
 
     public boolean isCorrect(String userAnswer){
+            if(score == 6 && currentAnagram.isCorrect(userAnswer)){
+                level = Difficulty.MEDIUM; 
+            }
+
+            if(score == 10 && currentAnagram.isCorrect(userAnswer)){
+                level = Difficulty.HARD;
+            }
+            score++; //update score
+            
         return currentAnagram.isCorrect(userAnswer);
     }
 
     public int getScore(){
-        //update score?
-        score ++;
         return score;
     }
 
