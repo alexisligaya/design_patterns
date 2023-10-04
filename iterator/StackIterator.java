@@ -7,16 +7,16 @@ public class StackIterator {
 
     public StackIterator(Stack<String> items){
         this.items = items;
-        this.position = items.size()-1;
+        this.position = 0;
     }
 
     public String next(){
         if(hasNext())
-            return items.get(position--);
+            return items.get(position++);
         return null;
     }
 
     public boolean hasNext(){
-        return position >= 0;
+        return position < items.size();
     }
 }
